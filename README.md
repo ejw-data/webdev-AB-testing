@@ -32,3 +32,9 @@ This repo explores the basic concepts of how to obtain information for AB testin
 1.  IP Address
 1.  User-Agent String
 1.  Referrer Header
+
+
+## Creating the Database  
+1.  From terminal, type: `sqlite3 <db_name>`
+2.  Write SQL queries to create tables
+3.  When complete type: `.exit`

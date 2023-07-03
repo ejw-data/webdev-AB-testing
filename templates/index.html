@@ -12,6 +12,12 @@
 
 <body>
     <h1>AB Testing Page</h1>
+    <button id="button1" class="trackable">Click and Track Button 1</button>
+    <button id="button2" class="trackable">Click and Track Button 2</button>
+    <p>RESULTS:</p>
+    {% for item in experiments %}
+        <span>Clicked:  {{item.item_clicked}}</span><br>
+    {% endfor %}
 
     <script type="text/javascript" src="./static/js/index.js"></script>
     <script type="text/javascript" src="./static/js/tracker.js"></script>
