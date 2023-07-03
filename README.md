@@ -17,3 +17,18 @@ This repo explores the basic concepts of how to obtain information for AB testin
 1. add error handling
 1. more sophisticated tracking
 1. improved analysis page
+
+
+## Key Performance Indicators (KPI)
+1. conversion rate
+1. click-through rate
+1. bounce rate
+1. page views
+1. form submissions
+
+## Browser Information
+1.  Cookies
+1.  Local Storage or Session Storage
+1.  IP Address
+1.  User-Agent String
+1.  Referrer Header

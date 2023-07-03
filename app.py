@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect
+from flask import Flask, render_template, request, redirect, make_response
 from sqlalchemy import create_engine, Column, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
@@ -23,9 +23,13 @@ def home():
     experiments = session.query(Experiment).all()
     session.close()
 
-    return render_template('index.html', experiments=experiments)
+    response = make_response(render_template('index.html', experiments=experiments))
+    response.headers['X-Parachutes'] = 'parachutes are cool'
+    response.set_cookie('ejw', '464535346')
 
-# click event sends information back
+    return response
+
+# click event sends information back - see tracker.js
 @app.route('/track_click', methods=['POST'])
 def track_click():
     element_id = request.json.get('element_id')

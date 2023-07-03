@@ -1,3 +1,4 @@
+// sends clicked element's id
 function trackClick(event) {
     var elementId = event.target.id;  // Get the ID of the clicked element
     // Send an AJAX request to the Flask server with the clicked element's ID
