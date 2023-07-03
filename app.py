@@ -25,6 +25,14 @@ def home():
 
     return render_template('index.html', experiments=experiments)
 
+# click event sends information back
+@app.route('/track_click', methods=['POST'])
+def track_click():
+    element_id = request.json.get('element_id')
+    # Process and store the click information as needed
+    # You can save it to a database, log file, or perform any other desired action
+    # ...
+    return 'OK'
 
 @app.route('/increment/<experiment_id>/<variant>')
 def increment(experiment_id, variant):
