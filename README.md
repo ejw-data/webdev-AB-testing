@@ -11,13 +11,29 @@ Author:  Erin James Wills, ejw.data@gmail.com
 <hr>  
 This repo explores the basic concepts of how to obtain information for AB testing.
 
+## Status  
+This is just the starting point but the core structure of the code works as of 7/3/2023.  The Flask app currently loads and index.html page that has two buttons.  Each button is tracked through the class associated with it named `trackable`.  The database currently stores only the id of the button clicked but this can be expanded to include a data, session id, and user id.  The app already has a working feature that stores a cookie but this feature needs improved such that the database is checked for this cookie and if the id associated with the cookie can not be found then a new id is assigned.  
 
-## Future Improvements
+<br>
+
+## Next Phase  
+1.  Create cookie containing a user id
+1.  Update database to collect datetime, cookie id, etc related to page interaction
+1.  Create two html pages that are considered the A and B versions.  
+1.  Create admin page that summarizes website interactions via a dashboard
+    * Dashboard includes  
+        * Table of most recent users to access page
+        * Show t-test of A and B pages
+
+<br>
+
+## Longterm Goals
 1. add authentication
 1. add error handling
 1. more sophisticated tracking
 1. improved analysis page
 
+<br>
 
 ## Key Performance Indicators (KPI)
 1. conversion rate
@@ -26,6 +42,8 @@ This repo explores the basic concepts of how to obtain information for AB testin
 1. page views
 1. form submissions
 
+<br>
+
 ## Browser Information
 1.  Cookies
 1.  Local Storage or Session Storage
@@ -33,6 +51,7 @@ This repo explores the basic concepts of how to obtain information for AB testin
 1.  User-Agent String
 1.  Referrer Header
 
+<br>
 
 ## Creating the Database  
 1.  From terminal, type: `sqlite3 <db_name>`
